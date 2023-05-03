@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let userTimeSpend = prompt("Podaj ile średnio dziennie spędzasz czasu przy komputerze, w minutach");
+        userTimeSpend = parseInt(userTimeSpend);
+        let timeRecomendation = userTimeSpend/120
+        if(userTimeSpend<60) console.log("Nie spędzasz dużo czasu przy komputerze!");
+        else if(userTimeSpend>=60 && userTimeSpend<120) console.log("Powinnieneś trochę ograniczyć czas przy komputerze");
+        else if(userTimeSpend> 120) console.log("Powinieneś ograniczyć czas na komputerze do ", timeRecomendation, " godzin");
+        else console.log("Nie masz problemu")
+
+
+        setInterval(function() {
+            console.log("Szerokość okna: ", innerWidth);
+            console.log("Wysokość okna: ", innerHeight);
+        }, 2000);
+        
+    </script>
+</body>
+</html>
