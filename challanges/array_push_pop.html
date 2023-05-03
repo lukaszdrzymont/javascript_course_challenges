@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function generateNumArray(leng) {
+            let arr = [];
+
+            for(let i =0; i<leng; i++){
+                arr.push(i);
+            }
+
+            return arr;
+        }
+       
+        let array = generateNumArray(7);
+        console.log(array);
+        let remove1 = array.pop();
+        let remove2 = array.pop();
+        let remove3 = array.pop();
+        console.log(array, remove1,remove2, remove3);
+    </script>
+</body>
+</html>

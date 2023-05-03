@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function generateUser(name, email,city,job){
+            let user = {
+                username: name,
+                email: email,
+                city: city,
+                jobName: job
+
+            };
+            return user;
+        }
+        let user1 = generateUser("Lukasz","lik@wp.pl","wawa","dev");
+        let user2 = generateUser("Andrzej","an@wp.pl","wawa","kucharz");
+        console.log(user1);
+        console.log(user2);
+    </script>
+</body>
+</html>

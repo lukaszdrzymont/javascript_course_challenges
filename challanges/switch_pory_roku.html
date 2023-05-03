@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let monthNum = 6;
+        let season = "pora roku";
+
+        switch(monthNum) {
+            case 3: 
+            case 4: 
+            case 5:
+                season = "Wiosna";
+                break;
+            case 6: 
+            case 7: 
+            case 8:
+                season = "Lato";
+                break;
+            case 9: 
+            case 10: 
+            case 11: 
+                season = "Jesień";
+                break;
+            case 12: 
+            case 1: 
+            case 2: 
+                season = "Zima";
+                break;
+            default:
+                season="Brak informacji";
+    
+        }
+        console.log("Aktualna pora roku to: ", season);
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function createUser(name, contact) {
+            let user = {
+                name: name,
+                
+            };
+            if(typeof contact =="string") {
+                user.email=contact;
+            }
+            else if(typeof contact=="number") {
+                user.telephone=contact;
+            }
+            else {
+                return 0;
+            }
+
+            return user;
+        }
+
+        let user1= createUser("Ola", "exaple@wp.pl");
+        let user2= createUser("Kasia", 43245243523);
+        console.log(user1, user2);
+    </script>
+</body>
+</html>

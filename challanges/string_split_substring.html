@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getEmailParts(email) {
+            let parts=email.split("@");
+            let monkeyIndex=email.indexOf("@");
+            let dotIndex = email.indexOf(".", monkeyIndex);
+            let name = email.substring(0,monkeyIndex);
+            let domain = email.substr(monkeyIndex+1,(dotIndex-monkeyIndex-1));
+            let domainExt = email.slice(dotIndex+1, email.length);
+
+            return {
+                parts: parts,
+                name: name,
+                domain: domain,
+                domainExt: domainExt
+            };
+        }
+
+        let email1 = "luki@wp.pl"
+        let email2 = "kasia@example.com"
+        let email3 = "adam.kowalski@domena.pl"
+        
+        console.log(getEmailParts(email1),getEmailParts(email2),getEmailParts(email3));
+    </script>
+</body>
+</html>

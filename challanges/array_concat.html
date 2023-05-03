@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function createSchoolGroup(groupLetter,numGroups) {
+            let arr = [];
+            for(let i = 1; i<=numGroups; i++) {
+                let z = i.toString().concat(groupLetter);
+                arr.push(z);
+            }
+            return arr;
+        }
+        
+        let class1= createSchoolGroup("a",3);
+        let class3= createSchoolGroup("b",6);
+        let class2= createSchoolGroup("c",8);
+        finalArray = class1.concat(class3.concat(class2));
+        console.log(finalArray);
+        </script>
+</body>
+</html>

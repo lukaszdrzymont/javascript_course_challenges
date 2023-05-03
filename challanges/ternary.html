@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = {
+            email: "ania@test.com",
+            membershipCost: 100,
+            numMembershipYears: 3,
+            numbersOfPosts: 40
+        };
+        function extendMemberShip(user) {
+            let membershipDiscountFlag = user.numMembershipYears >=2 ? true : false;
+            let numbersofPostsFlag = user.numbersOfPosts >= 30 ? true : false;
+            if(membershipDiscountFlag && numbersofPostsFlag) {
+                user.membershipCost *= 0.6;
+                return `Użytkownik z mailem ${user.email}
+                kwalifikuje się do zniżki i teraz roczna
+                opłata za forum będzie wynosić ${user.membershipCost}`;
+            }
+            else {
+                return `Niestety użytkownik z mailem ${user.email} nie kwalifikuje się do zniżki, więc oplata za forum pozostaje taka sama, czyli: ${user.membershipCost}`;
+            }
+        }
+        console.log(extendMemberShip(user));
+    </script>
+</body>
+</html>

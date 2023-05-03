@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let company = {
+            name: "Example Ltd",
+            street: "Wilcza",
+            city: "Wawa",
+            employees: []
+        };
+
+        function addEmployes(name, email, job) {
+            let employer = {
+                name: name,
+                email: email,
+                job: job
+            };
+            company.employees.push(employer);
+
+        }
+        addEmployes("lukasz", "lukasz@example", "programmer");
+        addEmployes("Andrzej", "andrze@example", "tester");
+        addEmployes("Monika", "monika@example", "consultant");
+        console.log(company);
+    </script>
+</body>
+</html>

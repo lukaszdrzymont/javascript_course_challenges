@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        soldCars = 1200;
+        carPrice = 90000;
+        let fullIncome = soldCars*carPrice;
+        console.log("Całkowity przychód firmy to: "+fullIncome);
+        let factoryCosts = fullIncome * 0.65;
+        console.log("Koszty działania fabryki: "+factoryCosts);
+        let marketingCosts = fullIncome * 0.1;
+        console.log("Koszty marketingu: "+marketingCosts);
+        let income = fullIncome - (factoryCosts+marketingCosts);
+        console.log("Dochód fabryki po odliczeniu kosztów: "+income);
+        let incomeTax = income * 0.19;
+        console.log("Podatek od dochodu wynosi: "+incomeTax);
+        let incomeAfterTax = income-incomeTax;
+        console.log("Dochód po odliczeniu podatku: "+incomeAfterTax);
+        let incomePerAction = incomeAfterTax / 30000;
+        console.log("Zysk na jednej akcji: "+incomePerAction);
+        
+
+    </script>
+</body>
+</html>

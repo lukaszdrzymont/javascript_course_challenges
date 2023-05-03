@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        cel = 20;
+        fahr = 86;
+        function cToF(celsius){
+            let fahrenheit = celsius*(9/5) +32;
+            return fahrenheit;
+        }
+        function fToC(fahrenheit) {
+            let celsius = (fahrenheit-32)*(5/9);
+            return celsius
+        }
+
+        let resultOfcToF = cToF(cel);
+        let resultOfFtoC = fToC(fahr);
+
+        console.log(cel+"\xB0 Celsjusza to "+resultOfcToF+"\xB0 Fahrenheita");
+        console.log(fahr+"\xB0 Fahrenheita to "+resultOfFtoC+"\xB0 Celsjusza");
+    </script>
+</body>
+</html>

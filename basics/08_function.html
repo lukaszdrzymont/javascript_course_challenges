@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function multiply(a,b,c) {
+            return a * b * c;
+        }
+        
+        function substract(a,b) {
+            return a - b;
+        }
+
+        function getSomeNumber() {
+            return 78;
+        }
+
+        
+
+        let multiplyResult = multiply(3,4,5);
+
+        console.log(multiplyResult);
+
+        let multiplyResult2 = multiply(4,5,6);
+
+        console.log(multiplyResult2);
+
+        console.log(substract(7,6));
+
+        console.log(getSomeNumber());
+
+        let money = 1000;
+        let intrestRate = 0.05;
+
+        function calculateInvestResult(money, intrestRate) {
+            return money + (money * intrestRate);
+        }
+
+        let investmentResult = calculateInvestResult(money, intrestRate);
+        console.log(investmentResult);
+
+
+        // function expression 
+        let add10 = function(num) {
+            return num + 10;
+        }
+        console.log(add10(15)); //25
+
+        add10 = function(num) {
+            let sum= num+10;
+            console.log(sum);
+            return sum;
+        }
+
+        const sum = add10(20); //30
+        console.log(sum); //30
+
+        function downloadFile(fileName, onComplete, onError) {
+            if (fileName.length > 5) {
+                onComplete("success");
+            } else {
+                onError("Error!");
+            }
+        }
+
+        downloadFile("fileName123.txt", 
+            function (str) {
+                console.log("OnComplete:", str);
+            }, 
+            function (str){
+                console.log("Error:", str);
+            });
+
+        
+
+    </script>   
+</body>
+</html>
