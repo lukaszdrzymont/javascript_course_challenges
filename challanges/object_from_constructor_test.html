@@ -11,10 +11,28 @@
         let Magazine = function(title) {
             this.name = title
             this.adverts = [];
-            this.addAdvert= function(name, page) {
-                
+            this.addAdvert= function(titleOfAdvert, page) {
+                this.adverts.push({
+                    name: titleOfAdvert,
+                    page: page 
+                });    
+            }
+            this.printAdverts = function() {
+                for(let i = 0; i<this.adverts.length; i++) {
+                    let a = this.adverts[i];
+                    console.log("Advert:", a.name, a.page)
+                }
             }
         }
+
+        let magazine1 = new Magazine("Sportyy");
+        magazine1.addAdvert("kettle",1)
+        magazine1.addAdvert("maty od taty",2 )
+        magazine1.addAdvert("butykuty", 3)
+
+        console.log(magazine1)
+
+        magazine1.printAdverts()
             
         
     </script>
