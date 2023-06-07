@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let truck = {
+            _brand:"MAN",
+            _model: "TGX",
+            _topSpeed: 0,
+
+            set topSpeed(newValue){
+                if (newValue>0) {
+                    this._topSpeed = newValue;
+                }
+                else console.log("Speed to low");
+            },
+            set brand(newValue) {
+                this._brand = newValue;
+            },
+            set model(newValue) {
+                this._model = newValue;
+            },
+            get brand(){
+                return this._brand
+            },
+            get model(){
+                return this._model
+            },
+            get topSpeed(){
+                return this._topSpeed
+            }
+        };
+        
+
+        truck.brand = "Iveco";
+        truck.model = "Eurocargo";
+        truck.topSpeed = 200;
+
+        console.log(truck.brand)
+        console.log(truck.model)
+        console.log(truck.topSpeed)
+
+        
+
+    </script>
+</body>
+</html>
