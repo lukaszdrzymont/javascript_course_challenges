@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                
+            //Napisz program, który będzie sprawdzał czy w macierzy dwuwymiarowej występuje podana wartość 
+            //a. Na wejściu programu 
+            //1. Zdefiniowana macierz o wymiarach 5x5 typu tekstowego 
+            //2. Wartość poszukiwana 
+            //b. Na wyjściu programu 
+            //1. Informacja o występowaniu lub braku występowania danego elementu w macierzy 
+
+        
+            function checkMatrix(matrix, seekingValue) {
+            matrix = matrix.flat()
+            if (matrix.includes(seekingValue)) return (`${seekingValue} występuje w matrycy`);
+            else return (`${seekingValue} nie występuje w matrycy`);
+
+        }
+
+        let matrix = [
+            ["a","aa","aaa","aaaa","aaaaa"],
+            ["b","bb","bbb","bbbb","bbbbb"],
+            ["c","cc","ccc","cccc","ccccc"],
+            ["d","dd","ddd","dddd","ddddd"],
+            ["e","ee","eee","eeee","eeeee"]
+        ];
+
+        console.log(checkMatrix(matrix,"dd"));
+        console.log(checkMatrix(matrix,"www"));
+
+        
+    </script>
+</body>
+</html>
