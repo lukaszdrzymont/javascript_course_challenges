@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Napisz program, który w podanym zdaniu zamieni wszystkie wystąpienia danej litery na nowo podaną wartość 
+            a. Na wejściu programu 
+            1. Zdefiniowane zdanie 
+            2. Podana litera do wyszukania 
+            3. Podana litera do zamiany 
+            b. Na wyjściu programu 
+            1. Wypisane zdanie przed zmian
+            2. Wypisane zdanie po zmianie
+        */
+
+        function stringManipulation(str, letterToFind, LetterToChange) {
+            
+            let newStr = str.replaceAll(letterToFind, LetterToChange)
+
+            return `Zdanie przed zmianą: ${str}
+            Zdanie po zmianie: ${newStr}`
+        }
+
+        console.log(stringManipulation("Ale urwal","l", "r"))
+
+        
+
+
+    </script>
+</body>
+</html>
