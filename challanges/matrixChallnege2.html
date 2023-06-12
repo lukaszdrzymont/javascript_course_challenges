@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Napisz program, który zwróci wszystkie indeksy pod którymi występuje podana wartość w macierzy dwuwymiarowej 
+        //a. Na wejściu programu 
+        //1. Zdefiniowana macierz o wymiarach 10x10 typu liczbowego 
+        //2. Wartość poszukiwana 
+        //b. Na wyjściu programu 
+        //1. Wypisanie wszystkich indeksów w postaci x: Wartość y: Wartość, gdzie x i y 
+        //reprezentuje odpowiednio indeks wiersza i kolumny, pod którym znaleziona została zadana wartość 
+        
+
+        //Stworzenie generatora matryc, gdzie x = liczba wiesszy y = liczba kolumn rangeOfNumbers= Zakres generwanych liczb w matrycy
+        function matrixGenerator(x, y, rangeOfNumbers){
+            matrix = [];
+            for(let i=0;i<x; i++){
+                row = [];
+                for(let j = 0; j<y;j++){
+                    row.push(Math.trunc(Math.random()*rangeOfNumbers))
+
+                }
+                matrix.push(row);
+
+            }
+            return matrix;
+        }
+       
+
+
+        function seekIndicesOfValue(matrix, value) {
+            matrix= matrix.flat()
+            matrix
+
+            let indexOfValue = matrix.findIndex((element) => element === value )
+            let x= Math.trunc(indexOfValue/10)
+            let y = Math.round(((indexOfValue/10)-(Math.trunc(indexOfValue/10)))*10 + 1)
+
+            
+            mat=[]
+            for(let i=0;i<matrix.length;i++){
+               mat.push(matrix.splice(0,10))
+            }
+            matrix= mat;
+            return `${value} znajduje się na koordynatach o wartosciach 
+            x:${x}
+            y:${y}`
+            
+        }
+        
+        let matrix = []
+        matrix = matrixGenerator(10,10,1000)
+        console.log(matrix)
+
+        console.log(seekIndicesOfValue(matrix,80))
+
+        
+    </script>
+</body>
+</html>
