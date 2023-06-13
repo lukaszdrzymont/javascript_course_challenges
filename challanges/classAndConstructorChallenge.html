@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*
+Napisz program, który będzie zawierał definicję klasy wraz z konstruktorem przyjmującym 
+dwa parametry oraz metodami umożliwiającymi pobieranie i ustawianie tych dwóch 
+parametrów w klasie 
+A. Na wejściu programu 
+    I. Zdefiniowana klasa zawierająca 
+        1. Konstruktor z dwoma parametrami 
+        2. Metody do ustawiania i pobierania parametrów w klasie 
+B. Na wyjściu programu 
+    I. Zaprezentowanie działania klasy 
+        1. Stworzenie obiekty 
+        2. Wypisanie wartości parametrów z obiektu podanych w konstruktorze 
+        3. Zmiana tych parametrów 
+        4. Ponowne wypisanie tych wartości
+*/
+
+        class User {
+            constructor(name, email) {
+                this.name = name;
+                this.email = email;
+            }
+        
+            
+            get name() {
+                return this._name;
+            }
+            get email() {
+                return this._email;
+            }
+            set name(newName){
+                this._name = newName;
+            }
+            set email(newEmail) {
+                this._email = newEmail;
+            }
+            
+        }
+
+        let user1 = new User("Lukasz","Luki@example.com")
+
+        console.log(user1.name);
+        console.log(user1.email)
+        user1.name = "Andrzej";
+        user1.email = "new@email.com"
+        console.log(user1.name);
+        console.log(user1.email);
+    
+   
+        
+    </script>
+</body>
+</html>
