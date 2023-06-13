@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*
+Napisz program, który podaną wartość liczbową całkowitoliczbową w systemie dziesiętnym 
+przedstawi w systemie dwójkowym, ósemkowym i szesnastkowym 
+a. Na wejściu programu 
+1. Podana liczba całkowitoliczbowa w systemie dziesiętnym 
+b. Na wyjściu programu 
+1. Wypisanie liczby w podanych systemach liczbowych 
+*/
+        function convertingNumbers(number) {
+            let binaryNumber=[];
+            let x = number;
+            while(x!=1){
+                let rest = x %2;
+                x = Math.trunc(x/2);
+                binaryNumber.push(rest);
+            }
+            binaryNumber.push("1");
+            binaryNumber.reverse();
+            binaryNumber = binaryNumber.toString();
+            binaryNumber=binaryNumber.replaceAll(",","");
+
+            let x8 =number;
+            let octalNumber = [];
+            while(x8>=8) {
+                var rest8 = x8 % 8;
+                x8 = Math.floor(x8/8)
+                octalNumber.push(rest8)
+               }
+            octalNumber.push(x8%8)
+            octalNumber=octalNumber.reverse()
+            octalNumber = octalNumber.join("")
+
+
+            let x16 =number;
+            let hexNumber = [];
+            while(x16>=16) {
+                var rest16 = x16 % 16;
+                x16 = Math.floor(x16/16)
+                switch(rest16) {
+                case 10:
+                    rest16 = "A"
+                    break;
+                case 11:
+                    rest16 = "B";
+                    break;
+                case 12:
+                    rest16="C";
+                    break;
+                case 13:
+                    rest16 = "D";
+                    break;
+                case 14:
+                    rest16 = "E";
+                    break;
+                case 15:
+                    rest16= "F";
+                    break;
+            }
+                hexNumber.push(rest16)
+               }
+               switch(x16) {
+                case 10:
+                    x16 = "A"
+                    break;
+                case 11:
+                    x16 = "B";
+                    break;
+                case 12:
+                     x16="C";
+                    break;
+                case 13:
+                    x16 = "D";
+                    break;
+                case 14:
+                    x16 = "E";
+                    break;
+                case 15:
+                    x16= "F";
+                    break;
+            }
+            console.log(x16)
+            console.log(rest16)
+            hexNumber.push(x16)
+            hexNumber=hexNumber.reverse()
+            hexNumber = hexNumber.join("")
+
+            return `Liczba ${number} w systemie dziesiętnym to:
+            ${binaryNumber} w systemie dziesiętnym
+            ${octalNumber} w systemie ósemkowym
+            ${hexNumber} w systemie szesnastkowym`
+        }
+        let num= 60;
+        console.log(convertingNumbers(num));
+        console.log("------------------------------------------------");
+
+        // ------------Prostszy sposób--------------
+
+        function convertingNumbers2(number) {
+            let decimalNumber = number;
+            let binaryNumber2 = decimalNumber.toString(2);
+            let octalNumber2 = decimalNumber.toString(8);
+            let hexNumber2 = decimalNumber.toString(16);
+            hexNumber2= hexNumber2.toUpperCase()
+
+            return `Liczba ${number} w systemie dziesiętnym to:
+            ${binaryNumber2} w systemie dziesiętnym
+            ${octalNumber2} w systemie ósemkowym
+            ${hexNumber2} w systemie szesnastkowym`
+        }
+        console.log(convertingNumbers2(num))
+    </script>
+</body>
+</html>
